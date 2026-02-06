@@ -1,16 +1,19 @@
-<script setup>
-// Composables and logic here
-</script>
-
 <template>
-  <div class="container">
-    <header>
-      <h1>Welcome</h1>
-    </header>
-    <main>
+  <div class="layout-container">
+    <main class="main-content">
       <slot />
     </main>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.layout-container {
+  height: calc(100vh - 4rem);
+  background-color: var(--ui-bg);
+}
+
+.main-content {
+  height: 100%;
+  margin-top: 4rem;
+}
+</style>

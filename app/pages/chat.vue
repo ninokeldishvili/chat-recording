@@ -1,8 +1,11 @@
-<script setup lang="ts"></script>
-<template>
-  <div class="chat-page">
-    <h1>Chat</h1>
-  </div>
-</template>
+<script setup lang="ts">
+const { chat, messages, sendMessage } = useChat();
 
-<style scoped></style>
+useHead({
+  title: chat.value.title,
+});
+</script>
+
+<template>
+  <ChatWindow :chat :messages @send-message="sendMessage" />
+</template>
