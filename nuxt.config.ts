@@ -7,4 +7,9 @@ export default defineNuxtConfig({
   runtimeConfig: {
     openaiApiKey: "hello",
   },
+  vite: {
+    optimizeDeps: {
+      include: ["debug"],
+    },
+  },
 });
