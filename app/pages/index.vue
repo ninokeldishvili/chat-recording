@@ -1,7 +1,15 @@
+<script setup lang="ts">
+const { createChat } = useChats();
+
+function handleCreateChat() {
+  createChat();
+}
+</script>
+
 <template>
   <UContainer class="page-container">
     <h1 class="title">Nuxt Chat</h1>
-    <UButton to="/chat" class="button"> Start Chat </UButton>
+    <UButton class="button" @click="handleCreateChat"> Start Chat </UButton>
   </UContainer>
 </template>
 
